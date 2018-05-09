@@ -43,14 +43,12 @@ wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/m
                         	<div class="flow-action">
                         		<div id="action_template" style="display:none;" >
                       				<div class="action-in-flow">
-                  	    				<i class="fa fa-bars fa-fw action-in-flow-Shape"></i>
                      					<div class="action-flow-image">
   	                     					<img src="images/email.svg">
                      					</div>  
 	                  					<div class="action-details">
 	                      					<div class="action-name">STEP 1 - EMAIL </div>
 		   			  		    			<div class="action-detail">{FirstName}, quick question</div>
-		   			  		    			<i class="fa fa-trash delete_action" aria-hidden="true"></i>	
 		   			  		    			<div class="hidden_data_for_action"></div>
                    						</div>    
                        				</div>
