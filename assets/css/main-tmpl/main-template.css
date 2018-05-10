@@ -489,9 +489,9 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
 }
  .wait_action_upper  > label
 {
-    display: -webkit-inline-box;
+    display: inline-flex;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -508,6 +508,7 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
     font-weight: 600;
     text-align: right;
     color: #707090;
+    margin:auto;
 
 }
 .wait_action_lower
@@ -962,8 +963,17 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
     border: none;
     resize: none;
     height: 100%;
+    display:block;
 	
 }
+
+.hdn_message > textarea:focus
+{
+	color: #707090;
+	background: none;
+}
+
+
 .hdn_addional_note
 {
     opacity: 0.5;
@@ -1212,8 +1222,15 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
     border: none;
     resize: none;
     height: 100%;
+    display:block;
 	
 }
+.gift_message > textarea:focus
+{
+	color: #707090;
+	background:none; 
+}
+
 .gift_addional_note
 {
     opacity: 0.5;
