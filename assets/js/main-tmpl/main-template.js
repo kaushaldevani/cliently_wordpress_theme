@@ -92,7 +92,7 @@ var addactions = function(actions)
 	       		  break;
 	    	 case "Handwritten_Notes":
 
-	    		  stepname = 'Handwritten_Notes';
+	    		  stepname = 'Handwritten Notes';
 			      imgpath  = base_url + "/hwnote.svg";
 			      action_detail = "Notes"
 				  var hwnote_msg =  $('<textarea class="hwnote_msg" />');
