@@ -556,7 +556,7 @@ $(document).ready(function(){
 	  			      var gift_card_amount_val =$('<div class="gift_card_amount_val"></div>');
 	  			      gift_card_amount_val.append($(hidden).find('input.ammount_for_gifting	').val());
 	  			      gift_card_amount.append(gift_card_amount_val);
-	  			      gift_card_amount.append('<p>These will cost 35 credits each and includes the handwritten message as well as postage.</p>');
+	  			      gift_card_amount.append('<p>These will cost 35 credits each and includes the handwritten message as well as postage.</p>'
 	  			      gift_card_area.append(gift_card_amount);
 
 				      var gift_message = $('<div class="gift_message"><textarea/></div>');
