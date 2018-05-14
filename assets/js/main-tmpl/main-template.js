@@ -1,5 +1,5 @@
-var base_url_back = 'http://localhost/cliently_cms/uploads';
-var current_theme = "twentyseventeen";
+var base_url_back = 'https://www.cliently.com/cliently_cms/uploads';
+var current_theme = "x";
 
 var addactions = function(actions)
 {
@@ -556,16 +556,12 @@ $(document).ready(function(){
 	  			      var gift_card_amount_val =$('<div class="gift_card_amount_val"></div>');
 	  			      gift_card_amount_val.append($(hidden).find('input.ammount_for_gifting	').val());
 	  			      gift_card_amount.append(gift_card_amount_val);
-	  			      
-	  			      
-	  			    var credit_total = 8;
-	  			      if($(hidden).find('input.ammount_for_gifting	').val() != "")
+	  			      var credit_total = 8;
+	  			      if($(hidden).find('input.ammount_for_gifting').val() != "")
 	  			      {
-	  			    	credit_total = parseInt($(hidden).find('input.ammount_for_gifting	').val())+ 8;
+	  			    	credit_total = parseInt($(hidden).find('input.ammount_for_gifting').val())+ 8;
 	  			      }
 	  			      gift_card_amount.append('<p>These will cost '+ credit_total +' credits each and includes the handwritten message as well as postage.</p>');
-	  			      
-	  			      
 	  			      gift_card_area.append(gift_card_amount);
 
 				      var gift_message = $('<div class="gift_message"><textarea/></div>');
