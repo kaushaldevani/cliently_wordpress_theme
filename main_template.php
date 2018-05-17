@@ -12,7 +12,7 @@ wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/m
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
+<html <?php language_attributes(); ?> class="no-js no-svg" style="margin-top:0 !important;">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,7 +94,7 @@ wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/m
 							  			<span class="list-icon">✓</span>
 							  		</div>
 							  		<div class="sev-text">
-							  			Send emails, videos, and physical postcards in your outbound campaign!
+							  			Reach out to clients through multiple channels to ensure the highest response rate.
 							  		</div>
 							  		</div>
 							  	<div class="list-item">
@@ -102,7 +102,7 @@ wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/m
 							  			<span class="list-icon">✓</span>
 							  		</div>
 							  		<div class="sev-text">
-							  			Send emails, videos, and physical postcards in your outbound campaign!
+							  			Send automated Emails, custom Video Messages, Physical Postcards, and Handwritten Notes with Gift Cards to really engage your prospect.
 							  		</div>
 							  		</div>
 							  		<div class="list-item">
@@ -110,13 +110,13 @@ wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/m
 							  			<span class="list-icon">✓</span>
 							  		</div>
 							  		<div class="sev-text">
-							  			Send emails, videos, and physical postcards in your outbound campaign!
+							  			Engage with leads directly from your CRM or by uploading a list of contacts.
 							  		</div>
 							  		</div>
 						  		</div>
 					  		
 						  		<div class="row text-center">
-						  			<button class="btn btn-primary btn-creat-flow">Create your own Flow !</button></div>
+						  			<button class="btn btn-primary btn-creat-flow">Create your own Flow!</button></div>
 						  		
 						  		
 					  			<div class="border-bottom"></div>
