@@ -1,8 +1,4 @@
 
-.main
-{
-	margin-top:-35px;
-}
 .page_name
 {
     width: 586px;
@@ -96,15 +92,26 @@ display:table;
 .right-panel .send-emails-videos .sev-text{
 	padding:5px;
 	display:table-cell;
+	width: 222px;
+    height: 45px;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #525252;
 }
 
 .flow-action
 {
-    padding-top: 33px;
+    margin-top: 33px;
     position: relative;
     overflow: auto;
-    height: 100%;
-	/* margin-bottom: 15px; */
+    height: 73.5%;
+	margin-bottom: 5%;
 }
 
 .action-in-flow {
@@ -122,7 +129,7 @@ display:table;
 }
 .wrtn_by
 {
-	margin-top: -20px;
+	margin-top: -8.5%;
     font-family: Roboto;
     font-size: 12px;
     font-weight: normal;
@@ -136,16 +143,15 @@ display:table;
 .author-in-flow
 {
   /*width: 275px;*/
-  width:91%;
+  width:90.1%;
   height: 69px;
   border-radius: 3px;
   background-color: #f4f4f4;
   /*margin: 0px 15px 15px 15px;*/
-  margin:0px 4.5% 4.5% 4.5%;
+  margin:11% 5.6% 11% 4.5%;
   float:right;
   cursor:pointer;
-  position: absolute;
-  bottom: 18px;	
+ 	
 }
 .author-in-flow > .action-flow-image 
 {
@@ -153,7 +159,7 @@ display:table;
   width: 18%;
   height: 50px;
   /*margin: 10px 12.5px 7px 8px;*/
-   margin: 10px 4.5% 7px 3%;
+   margin: 10px 4.5% 7px 2.5%;
 }
 .author-in-flow > .action-flow-image  > img 
 {
@@ -166,13 +172,47 @@ display:table;
 {
 	margin: 16px 1% 15px 0px;
 }
+.author-in-flow >.action-details > .action-name
+{
+	font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #525252;
+    opacity: 1;
+    height: 19px;
+}
+.author-in-flow >.action-details > .action-detail
+{
+    height: 19px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #525252;
+}
+
+
+
 .tips-in-flow
 {
-  position: absolute;
-  bottom: 122px;	
+  /*position: absolute;
+  bottom: 122px;*/
+  margin-bottom: 0;
+  width: 90.1%;
+  margin-right: 5.6%;
+  
 }
 .action-flow-image {
-  width: 13%;
+  width: 14.57%;
   height: 40px;
   /*margin: 7px 12.5px 7px 8px;*/
   margin: 7px 4.5% 7px 3%;
@@ -195,7 +235,7 @@ display:table;
 }
 
 .action-name {
-  width: auto;
+  width: 78%;
   height: 16px;
   opacity: 0.5;
   font-family: 'Roboto', sans-serif;
@@ -205,6 +245,10 @@ display:table;
   text-align: left;
   color: #707090;
   float: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
 }
 
 .action-detail {
@@ -225,10 +269,6 @@ display:table;
 .hidden_data_for_action
 {
 	display:none;
-}
-div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
-{
-   background-color: #5a68e9;
 }
 
 .right-panel .border-bottom{
@@ -253,7 +293,6 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
 {
     font-family: Roboto;
     font-size: 14px !important;
-    font-weight: bold !important;
     font-style: normal;
     font-stretch: normal;
     line-height: normal !important;
@@ -263,6 +302,7 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
     border-radius: 3px !important;
     background-color: #4a90e2 !important;
     height: 40px;
+    border: none !important;
 }
 /*related to modal Window*/
 .modal
@@ -279,10 +319,12 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
   border: none;
   color: white;
   padding: 10px !important;
+  height: 65px;
 }
 .modal-dialog .modal-content .modal-header .modal-title img {
   margin-top: -5px;
   width: 6.5%;
+  height: 54px;
 }
 .modal-dialog .modal-content .modal-header h4 {
   /*text-align: center;*/
@@ -465,7 +507,9 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
     letter-spacing: normal;
     text-align: left;
     color: #707090;
+    margin-top: 2.8%;
     display:none;
+    
 }
 
 .wait_action_upper
@@ -515,6 +559,7 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
 {
 	margin-top:6.5%;
     text-align: center;
+    margin-bottom: 7.2%;
 }
 
 .wait_action_lower > p:nth-child(1) 
@@ -646,12 +691,12 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
 .video_email_action_lower
 {
 	text-align: center;
-    margin-top: 2.8%;
 }
 
 .video_action_video_part > video
 {
-	width: 55%;
+	width: 400px;
+	height: 400px;
 }
 
 .post_card_lower
@@ -659,7 +704,9 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
     padding-top: 3%;
     padding-left: 4%;
     padding-right: 4%;
-    text-align: center
+    text-align: center;
+    min-height: 503px;
+    margin-bottom: 10px;
 }
 .post_card_lower >  .post_card_front 
 {
@@ -753,11 +800,10 @@ div.action-in-flow[action_class="Handwritten_Notes"] > .action-flow-image >img
 
 .post_card_to
 {
-	
     float: left;
     width: 30%;
-    margin-top: 17%;
-    height: 22%;
+    margin-top: 15%;
+    height: 17%;
 }
 .post_card_to >  p
 {
@@ -1352,3 +1398,30 @@ h4.modal-title  div.action_header  span
     text-align: left;
     color: #ffffff;
 }
+
+.slimScrollBar-for-action-box
+{
+    /* background: white; */
+   overflow-y: auto;
+   color:rgb(117, 168, 210);
+}
+.slimScrollBar-for-action-box::-webkit-scrollbar {
+    width: 3px;
+}
+
+.slimScrollBar-for-action-box::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.slimScrollBar-for-action-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgb(10, 184, 255); 
+}
+.action-in-flow:last-child
+{
+	margin-bottom: 0px;
+}
+
+
+
