@@ -1,5 +1,6 @@
 var base_url_back = 'https://www.cliently.com/cliently_cms/uploads';
 var current_theme = "x";
+var default_credit = 8;
 
 var addactions = function(actions)
 {
@@ -32,7 +33,15 @@ var addactions = function(actions)
 			 case 'WAIT':
 	       		  stepname = 'WAIT';
 	       		  imgpath  = base_url + '/wait.svg';
-				  action_detail='Wait ' + action.days +' Days' ;
+	       		  if(action.days == '1')
+	       		  {
+	       			action_detail='Wait ' + action.days +' Day' ;  
+	       		  }
+	       		  else
+	       		  {
+	       			action_detail='Wait ' + action.days +' Days' ;
+	       		  }
+				  
 				  var only_weekend = $('<input class=\'only_weekend_check\' />');
 				  var days_val = $('<input class=\'days_val\' />');
 				  only_weekend.val(action.weekend_check);
@@ -43,7 +52,7 @@ var addactions = function(actions)
 
 			 case "VIDEO-MESSAGE":
 
-	    		  stepname = 'VIDEO-MESSAGE';
+	    		  stepname = 'VIDEO MESSAGE';
 				  imgpath  = base_url + "/videomessage.svg";
 				  action_detail= action.video_email_subject ;
 				  var video_msg_body =  $('<textarea class="videoemail_body" />');
@@ -92,8 +101,8 @@ var addactions = function(actions)
 	       		  break;
 	    	 case "Handwritten_Notes":
 
-	    		  stepname = 'Handwritten Notes';
-			      imgpath  = base_url + "/hwnote.svg";
+	    		  stepname = 'HANDWRITTEN NOTES';
+			      imgpath  = base_url + "/handwritten.svg";
 			      action_detail = "Notes"
 				  var hwnote_msg =  $('<textarea class="hwnote_msg" />');
 			      var hdnote_script = $('<input class="hdnote_script" />');
@@ -132,8 +141,8 @@ var addactions = function(actions)
 
 	    	 case "Gifting":
 
-	    		  stepname = 'Gifting';
-			      imgpath  = base_url + "/gift.svg";
+	    		  stepname = 'GIFTING';
+			      imgpath  = base_url + "/gifting.svg";
 			      action_detail = "Gift"
 
 		    	  var gifting_image =  $('<input class="gifting_image" />');
@@ -181,17 +190,18 @@ var addactions = function(actions)
 	    	 case "LinkedIn":
 
 		   		  var type ='';
-		   		  stepname = 'LinkedIn';
+		   		  stepname = 'LINKEDIN';
+		   		  
 		   	      imgpath  = base_url + "/linkedin.svg";
 
 		   	      if(action.linkedin_type =='INMAIL')
 		   	      {
-		   	    	  action_detail = action.linedinmailsub ;
+		   	    	  action_detail = 'InMail' ;
 		   	    	  type ='INMAIL';
 		   	      }
 		   	      else
 		   	      {
-		   	    	  action_detail =  'CONNECT';
+		   	    	  action_detail =  'Connect';
 		   	    	  type ='CONNECT';
 		   	      }
 		   	       var linedinmailsub = $('<input class="linedinmailsub" />');
@@ -202,7 +212,7 @@ var addactions = function(actions)
 		   	       linkedin_msg.val(decodeURIComponent(action.linkedin_msg));
 		   	       if(type == 'INMAIL')
 		   	       {
-		   	    	   linedinmailsub.val(action_detail);
+		   	    	   linedinmailsub.val(action.linedinmailsub);
 		   	       }
 		   	       else
 		   	       {
@@ -218,8 +228,17 @@ var addactions = function(actions)
 				 imgpath  = base_url + "/twitter.svg";
 			     action_detail = action.follow_unfollow;
 
+			     if(action.follow_unfollow == 'FOLLOW')
+			     {
+			    	 action_detail = 'Follow';
+			     }
+			     else if(action.follow_unfollow == 'UNFOLLOW')
+			     {
+			    	 action_detail = 'UnFollow';
+			     }
+			     
 				 var follow_unfollow = $('<input class="follow_unfollow" />');
-				 follow_unfollow.val(action_detail);
+				 follow_unfollow.val(action.follow_unfollow);
 
 		   	     $(addDiv).find('.hidden_data_for_action').append(follow_unfollow);
 
@@ -235,6 +254,8 @@ var addactions = function(actions)
 	   $(addDiv).attr('action_class', stepname );
 	   $(addDiv).attr('position', action_position);
 	   $(".flow-action").append(addDiv);
+	   $(".flow-action").addClass('slimScrollBar-for-action-box');
+	   
 	}
 
 }
@@ -255,7 +276,7 @@ var addAuthorDetails = function(author)
 	  	  $(addDiv).find('div.action-details >  div.action-name').text(stepname);
 	  	  $(addDiv).find('div.action-details >  div.action-detail').text(action_detail);
 	  	  $(addDiv).addClass('author-in-flow').removeClass('action-in-flow');
-	  	  $(".flow-action").append(addDiv);
+	  	  $(".action-left-panel").append(addDiv);
     }
  }
 
@@ -293,7 +314,7 @@ var addTips = function(tips)
 		  tips_body.val(tips);
 		  $(addDiv).find('.hidden_data_for_action').append(tips_body);
 
-		  $(".flow-action").append(addDiv);
+		  $(".action-left-panel").append(addDiv);
 	 }
 }
 
@@ -407,7 +428,7 @@ $(document).ready(function(){
 	                  $(modal).css('display','block');
 
 	 			  break;
-	    		case 'VIDEO-MESSAGE':
+	    		case 'VIDEO MESSAGE':
 	    			  $(modal).attr('id','work-pane-email-video');
 	    			  $(modal).find('.modal-header > h4 > img ').attr('src',base_url + '/videomessage.svg');
 
@@ -483,14 +504,14 @@ $(document).ready(function(){
 	                  $(modal).find('.work-creation-wizard-step').append(post_card_comm,post_card_lower);
 	  			      $(modal).css('display','block');
 				  break;
-	    	    case 'Handwritten_Notes':
+	    	    case 'HANDWRITTEN NOTES':
 	    	    	  $(modal).attr('id','handwritten_notes');
-	  			      $(modal).find('.modal-header > h4 > img ').attr('src',base_url + '/hwnote.svg');
+	  			      $(modal).find('.modal-header > h4 > img ').attr('src',base_url + '/handwritten.svg');
 
 	  			      $(modal).find('.modal-header > h4 > img ').css('float','left');
 	                  var action_header = $('<div class="col-xs-11 action_header"/>');
 	                  action_header.append('<small>STEP ' + position + '</small>');
-	                  action_header.append('<span>Handwritten Notes</span>');
+	                  action_header.append('<span>'+ action +'</span>');
 	                  $(modal).find('.modal-header > h4 ').append(action_header);
 
 
@@ -500,7 +521,9 @@ $(document).ready(function(){
 				      hdn_comm.find('.btn-on').addClass('active');
 				      var hdn_message = $('<div class="hdn_message"><textarea/></div>');
 				      hdn_message.find('textarea').val($(hidden).find('textarea.hwnote_msg').val());
-				      hdn_message.css('background-image','url('+base_url+'/hdn_background.jpg)')
+				      hdn_message.css('background-image','url('+base_url+'/handwrittennote_bg.png)');
+				      hdn_message.css('background-repeat','no-repeat');
+				      
 				      var hdn_addional_note = $('<p class="hdn_addional_note">This will be handwritten on a 4x6 heavyweight index card.</p>');
 				      var hdn_envelop = $('<div class="hdn_envelop"/>');
 				      var hdn_envelop_from = $('<div class="hdn_envelop_from"/>');
@@ -525,10 +548,10 @@ $(document).ready(function(){
 				  break;
 
 
-	    	    case 'Gifting':
+	    	    case 'GIFTING':
 
 	    	    	  $(modal).attr('id','gifting');
-	  			      $(modal).find('.modal-header > h4 > img ').attr('src',base_url + '/gift.svg');
+	  			      $(modal).find('.modal-header > h4 > img ').attr('src',base_url + '/gifting.svg');
 	  			      $(modal).find('.modal-header > h4 > img ').css('float','left');
 	                  var action_header = $('<div class="col-xs-11 action_header"/>');
 	                  action_header.append('<small>STEP ' + position + '</small>');
@@ -556,17 +579,18 @@ $(document).ready(function(){
 	  			      var gift_card_amount_val =$('<div class="gift_card_amount_val"></div>');
 	  			      gift_card_amount_val.append($(hidden).find('input.ammount_for_gifting	').val());
 	  			      gift_card_amount.append(gift_card_amount_val);
-	  			      var credit_total = 8;
+	  			      var credit_total = default_credit;
 	  			      if($(hidden).find('input.ammount_for_gifting').val() != "")
 	  			      {
-	  			    	credit_total = parseInt($(hidden).find('input.ammount_for_gifting').val())+ 8;
+	  			    	credit_total = parseInt($(hidden).find('input.ammount_for_gifting').val())+ default_credit;
 	  			      }
 	  			      gift_card_amount.append('<p>These will cost '+ credit_total +' credits each and includes the handwritten message as well as postage.</p>');
 	  			      gift_card_area.append(gift_card_amount);
 
 				      var gift_message = $('<div class="gift_message"><textarea/></div>');
 				      gift_message.find('textarea').val($(hidden).find('textarea.gift_msg').val());
-				      gift_message.css('background-image','url('+base_url+'/hdn_background.jpg)')
+				      gift_message.css('background-image','url('+base_url+'/handwrittennote_bg.png)');
+				      gift_message.css('background-repeat','no-repeat');
 				      var gift_addional_note = $('<p class="gift_addional_note">This will be handwritten on a 4x6 heavyweight index card.</p>');
 
 				      var gift_envelop = $('<div class="gift_envelop"/>');
@@ -585,25 +609,24 @@ $(document).ready(function(){
 				      gift_envelop_to.append('<p class="gift_env_to_additional">Address will be populated from lead card.</p>');
 				      gift_envelop.append(gift_envelop_to);
 
+				      if($(hidden).find('input.gifting_envelop_ink_color').val()=="WHITE w BLACK INK")
+				      {
+				    	  $(gift_envelop).css('background-color','white');
+				    	  $(gift_envelop).find('div.gift_envelop_from > p').css('color','black');
+				    	  $(gift_envelop).find('div.gift_envelop_to > p').css('color','black');
+				      }
+				      
 //	    	    	  $('#gifting').find('select#gift_card').val($(hidden).find('input.gift_card_script').val());
 //	    	    	  $('#gifting').find('input#ammount_for_gifting').val($(hidden).find('input.ammount_for_gifting	').val());
 //
 //				      $('#gifting').find('select#script_for_gifting').val($(hidden).find('input.gifting_script').val());
 //				      $('#gifting').find('select#ink_color_for_gifting').val($(hidden).find('input.gifting_ink_color').val());
 //				      $('#gifting').find('select#envelop_ink_color_for_gifting').val($(hidden).find('input.gifting_envelop_ink_color').val());
-//
-//				      $('#gifting').find('input#to_full_name').val($(hidden).find('input.gifting_to_fullname').val());
-//				      $('#gifting').find('input#to_company').val($(hidden).find('input.gifting_to_companyname').val());
-//				      $('#gifting').find('input#to_line1').val($(hidden).find('input.gifting_to_line1').val());
-//				      $('#gifting').find('input#to_line2').val($(hidden).find('input.gifting_to_line2').val());
-//				      $('#gifting').find('input#from_full_name').val($(hidden).find('input.gifting_from_fullname').val());
-//				      $('#gifting').find('input#from_company').val($(hidden).find('input.gifting_from_companyname').val());
-//				      $('#gifting').find('input#from_line1').val($(hidden).find('input.gifting_from_line1').val());
-//				      $('#gifting').find('input#from_line2').val($(hidden).find('input.gifting_from_line2').val());
+
 	  			      $(modal).find('.work-creation-wizard-step').append(gift_comm,gift_card_area,gift_message,gift_addional_note,gift_envelop);
 				      $(modal).css('display','block');
 			      break;
-	    	   case 'LinkedIn':
+	    	   case 'LINKEDIN':
 	    		      $(modal).attr('id','linkedin');
 				      $(modal).find('.modal-header > h4 > img ').attr('src',base_url + '/linkedin.svg');
 				      $(modal).find('.modal-header > h4 > img ').css('float','left');
