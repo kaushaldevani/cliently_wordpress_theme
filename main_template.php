@@ -8,7 +8,7 @@ wp_enqueue_script( 'bootstrap-js', get_stylesheet_directory_uri().'/assets/js/ma
 wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/main-tmpl/main-template.js' );
 
 
-
+$current_theme = "twentyseventeen";
 
 ?>
 <!DOCTYPE html>
@@ -91,7 +91,7 @@ wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/m
 						  		<div class="send-emails-videos">
 						  		<div class="list-item">
 							  		<div class="icon-wrap">
-							  			<span class="list-icon">✓</span>
+							  			<img src="~/../wp-content/themes/<?php echo $current_theme;?>/assets/images/cliently-images/circle_check.svg">
 							  		</div>
 							  		<div class="sev-text">
 							  			Reach out to clients through multiple channels to ensure the highest response rate.
@@ -99,7 +99,7 @@ wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/m
 							  		</div>
 							  	<div class="list-item">
 							  		<div class="icon-wrap">
-							  			<span class="list-icon">✓</span>
+							  			<img src="~/../wp-content/themes/<?php echo $current_theme;?>/assets/images/cliently-images/circle_check.svg">
 							  		</div>
 							  		<div class="sev-text">
 							  			Send automated Emails, custom Video Messages, Physical Postcards, and Handwritten Notes with Gift Cards to really engage your prospect.
@@ -107,7 +107,7 @@ wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/m
 							  		</div>
 							  		<div class="list-item">
 							  		<div class="icon-wrap">
-							  			<span class="list-icon">✓</span>
+										<img src="~/../wp-content/themes/<?php echo $current_theme;?>/assets/images/cliently-images/circle_check.svg">
 							  		</div>
 							  		<div class="sev-text">
 							  			Engage with leads directly from your CRM or by uploading a list of contacts.

@@ -85,9 +85,11 @@ display:table;
     padding: 0px 2px;
 	color:white;
 }
-.right-panel .send-emails-videos .icon-wrap{
-	padding:5px;
+.right-panel .send-emails-videos .icon-wrap
+{
 	display:table-cell;
+    width: 10%;
+    padding-right: 6px;
 }
 .right-panel .send-emails-videos .sev-text{
 	padding:5px;

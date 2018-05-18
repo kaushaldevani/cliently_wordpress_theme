@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>check-circle-08</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Email-Analytics-/-Message---Email" transform="translate(-1174.000000, -383.000000)" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(1174.000000, 382.000000)">
+                <g id="check-circle-08" transform="translate(0.000000, 1.000000)">
+                    <path d="M8,16 C3.58865391,16 0,12.4111757 0,8 C0,3.58882435 3.58865391,0 8,0 C12.4113461,0 16,3.58882435 16,8 C16,12.4111757 12.4113461,16 8,16 Z" id="Shape" fill="#72C472"></path>
+                    <polygon id="Shape" fill="#FFFFFF" points="6.60869565 11.766473 2.84239304 8 3.82608696 7.01613565 6.60869565 9.79874435 12.173913 4.23352696 13.157607 5.2173913"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
