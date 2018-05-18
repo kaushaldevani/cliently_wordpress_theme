@@ -1,4 +1,5 @@
 var base_url_back = 'https://www.cliently.com/cliently_cms/uploads';
+var aws_upload_url = 'https://cliently-wp.s3.us-west-2.amazonaws.com/cliently_cms/';
 var current_theme = "x";
 var default_credit = 8;
 
@@ -270,7 +271,7 @@ var addAuthorDetails = function(author)
 
   	      addDiv.append('<div class="wrtn_by"> Written by : </div>');
 	  	  stepname = author.written_by;
-	  	  imgpath  = base_url_back + '/Images/'+author.author_image;
+	  	  imgpath  = aws_upload_url + author.author_image;
 	  	  action_detail= author.job_title ;
 	  	  $(addDiv).find('div.action-flow-image >img').attr('src',imgpath);
 	  	  $(addDiv).find('div.action-details >  div.action-name').text(stepname);
@@ -476,10 +477,10 @@ $(document).ready(function(){
 
 	                  var post_card_lower = $('<div class="post_card_lower">');
 	                  var post_card_front = $('<div class="post_card_front"><img src=""/></div>');
-	                  post_card_front.find('img').attr('src', base_url_back + '/Images/' + $(hidden).find('input.frnt_img').val() );
+	                  post_card_front.find('img').attr('src', aws_upload_url + $(hidden).find('input.frnt_img').val() );
 
 	                  var post_card_back = $('<div class="post_card_back"><img src=""/></div>');
-	                  post_card_back.find('img').attr('src', base_url_back + '/Images/' + $(hidden).find('input.bck_img').val());
+	                  post_card_back.find('img').attr('src', aws_upload_url + $(hidden).find('input.bck_img').val());
 
 	                  var post_card_msg = $('<div class="post_card_msg"><textarea/></div>');
 	                  post_card_msg.find('textarea').val( $(hidden).find('textarea.postcard_msg').val());
@@ -570,7 +571,7 @@ $(document).ready(function(){
 
 
 	  			      var gift_card_image = $('<div class="gift_card_image"><img src=""/></div>');
-	  			      $(gift_card_image).find('img').attr('src' ,base_url_back +"/Images/" + $(hidden).find('input.gifting_image').val());
+	  			      $(gift_card_image).find('img').attr('src' ,aws_upload_url + $(hidden).find('input.gifting_image').val());
 	  			      gift_card_image.append('<p>Amazon.com Gift Card</p>');
 	  			      gift_card_image.append('<a href="#">Choose a Different Gift Card</a>');
 	  			      gift_card_area.append(gift_card_image);
