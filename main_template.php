@@ -30,8 +30,7 @@ $current_theme = "twentyseventeen";
                   $similar_camps = json_encode($someArray['similar_camp'],true);
                   $author = json_encode($someArray['author'],true);
                   $tips = json_encode($someArray['tips'],true);
-//                var_dump($actions_data);
-                  
+                  $ind_data = json_encode($someArray['industry_data'],true);
                   ?>
                   <div class="page_title">
                       <div class="page_name">
@@ -127,7 +126,8 @@ $current_theme = "twentyseventeen";
 				  		</div>
                   <?php echo "<script type=\"text/javascript\">
                  			 
-                 	     $(document).ready(function() { 
+                 	     $(document).ready(function() {
+                 	              addPageTitle($ind_data); 
   								  addactions($actions_data);
   							  	  addSimilarCamp($similar_camps);
 								  addTips($tips);		

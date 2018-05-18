@@ -3,6 +3,18 @@ var aws_upload_url = 'https://cliently-wp.s3.us-west-2.amazonaws.com/cliently_cm
 var current_theme = "x";
 var default_credit = 8;
 
+
+var addPageTitle = function(ind_data)
+{
+	console.log(ind_data.ind_1);
+	console.log(ind_data.ind_2);
+    $('div.page_name').children().remove();
+    $('div.page_name').append('<p>'+ind_data.ind_1+'</p>');
+    $('div.page_name').append('<p>targeting</p>');
+    $('div.page_name').append('<p>'+ind_data.ind_2+'</p>');
+}
+
+
 var addactions = function(actions)
 {
 	for (var i = 0; i < actions.length; ++i)
