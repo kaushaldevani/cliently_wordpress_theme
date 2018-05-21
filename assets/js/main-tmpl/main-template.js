@@ -338,6 +338,9 @@ $(document).ready(function(){
 
 	$('.action-in-flow').click(function(){
 
+		$('.action-in-flow').removeClass('active');
+		$(this).addClass('active');
+		
 		var base_url = '~/../wp-content/themes/' + current_theme + '/assets/images/cliently-images';
 
 		var modal = $('.modal');

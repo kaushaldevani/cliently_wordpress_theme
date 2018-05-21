@@ -1,4 +1,7 @@
-
+.main
+{
+	overflow: hidden;
+}
 .page_name
 {
     width: 586px;
@@ -991,6 +994,7 @@ display:table;
     border: solid 1px #ccccd7;
    	margin: 2.3% auto 0;
     background: whitesmoke;
+    background-size:100% 100%;
 }
 .hdn_message > textarea
 {
@@ -1250,6 +1254,7 @@ display:table;
    	margin: 2.3% auto 0;
     background: whitesmoke;
     display:none;
+    background-size:100% 100%;
 }
 .gift_message > textarea
 {
@@ -1453,3 +1458,7 @@ h4.modal-title  div.action_header  span
 	
 }
 
+.action-in-flow.active
+{
+	border-color: #07a6ee;
+}
