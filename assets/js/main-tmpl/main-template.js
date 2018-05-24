@@ -424,7 +424,16 @@ $(document).ready(function(){
 	                  $(modal).find('.work-creation-wizard-step').attr('data-step','work-pane-event-time-delay');
 	                  var wait_upper = $('<div class="wait_action_upper" />');
 	                  $(wait_upper).append('<p>How long would you like to wait before sending the next step?</p>');
-	                  $(wait_upper).append('<label> <input id="wait_day" type="text" name="type_value" class="form-control" size="2" /> &nbsp;days</label>');
+	                  
+	                  if($(hidden).find('input.days_val').val() == "1")
+	                  {
+	                	  $(wait_upper).append('<label> <input id="wait_day" type="text" name="type_value" class="form-control" size="2" /> &nbsp;day</label>');
+	                  }
+	                  else 
+	                  {
+	                	  $(wait_upper).append('<label> <input id="wait_day" type="text" name="type_value" class="form-control" size="2" /> &nbsp;days</label>');
+	                  }
+	                  
 	                  $(wait_upper).find('#wait_day').val($(hidden).find('input.days_val').val());
 	                  $('#work-pane-event-time-delay').find('input#wait_day').val($(hidden).find('input.days_val').val());
 	                  var wait_lower = $('<div class="wait_action_lower">');

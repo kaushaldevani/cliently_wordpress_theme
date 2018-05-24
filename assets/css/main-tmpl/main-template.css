@@ -33,14 +33,16 @@
 {
   /*width: 1440px;*/
   width: auto;
-  height: 900px;
+  /*height: 900px;*/
+  height:100vh;
   background-color: #eef2f9;
 }
 .action-left-panel
 {
   /*width: 305px;*/
   width: 20%;
-  height: 900px;
+  /*height: 900px;*/
+  height:100vh;
   background-color: #ffffff;
   box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.25);
   float:left;
@@ -49,7 +51,8 @@
 {
    /*width: 305px;*/
    width: 20%;
-   height: 900px;
+   /*height: 900px;*/
+   height:100vh;
    background-color: #ffffff;
    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.25);
    float:right;
@@ -104,7 +107,7 @@ display:table;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
+    line-height: 1.5;
     letter-spacing: normal;
     text-align: left;
     color: #525252;
@@ -223,6 +226,25 @@ display:table;
   margin: 7px 4.5% 7px 3%;
   float: left;
 }
+
+@media screen and (min-width: 1521px) {
+  .action-flow-image 
+  {
+    width: 40px;
+    height: 40px;
+    /*margin: 7px 12.5px 7px 8px;*/
+    margin: 7px 12.5px 7px 7px;
+    float: left;
+  }
+  .action-details
+  {
+    float:left !important;
+  }
+}
+
+
+
+
 .action-flow-image > img {
   /*width: 40px;
   height: 40px;*/
