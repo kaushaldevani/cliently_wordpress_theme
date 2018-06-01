@@ -133,6 +133,22 @@ $current_theme = "x";
 								  addTips($tips);		
 								  addAuthorDetails($author);
 								  $($('div.flow-action > .action-in-flow')[0]).click();
+								  
+
+							$(window).scroll(function(){
+							 
+							    if($(document).scrollTop().valueOf() > 275)
+							    {
+									$('.action-left-panel').addClass('fixed');	
+									$('.right-panel').addClass('fixed_right');
+								}
+								else
+								{
+									$('.action-left-panel').removeClass('fixed');
+									$('.right-panel').removeClass('fixed_right');
+								}
+  
+							});  
 
 		                 });
                      </script>";
