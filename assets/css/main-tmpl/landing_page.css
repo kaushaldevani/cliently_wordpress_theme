@@ -1,0 +1,246 @@
+#content
+{
+	padding:0px !important;
+}
+.page_name
+{
+    width: auto;
+    font-family: Lato;
+    font-size: 54px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin: auto;
+    padding: 45px;
+}
+.page_name p
+{
+	font-family: Helvetica;
+	font-weight: bold;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: normal;
+  	letter-spacing: normal;
+  	text-align: left;
+  	color: #ffffff;
+  	margin: auto;
+  	text-align: center;
+}
+.page_name p:nth-child(1) 
+{
+   	font-size: 58px;
+   	margin-bottom:15px;
+}
+.page_name p:nth-child(2) 
+{
+  	height: 22px;
+  	font-size: 18px;
+}
+.page_title
+{
+	width: auto;
+    background-color: #08a6ed;
+	
+}
+
+div.selction_container p
+{
+  width: auto;
+  font-family: Helvetica;
+  font-size: 21px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4a4a4a;
+  margin:auto;
+  margin-top:29px;
+  text-align:center;
+  padding:0px 20px;
+  
+}
+
+div.flow-selector > a#dropdown_for_workflow-selection
+{
+	border: none;
+    width: 100%;
+    height: 38px;
+    text-align: left;
+    padding: 8px 10px 8px 7px;
+    font-family: 'Roboto',sans-serif;
+    color: #707090;
+    background-color: white;
+    margin: 0px;
+    box-shadow: none;
+    font-size: 21px;
+    line-height: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display:block;
+    overflow: hidden;
+	
+}
+div.flow-selector > div.dropdown-menu
+{
+	width: 100% !important;
+}
+
+div.flow-selector > div.dropdown-menu > a.dropdown-item
+{
+	width: 97%;
+    height: 40px;
+    float: left;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    color: rgb(112, 112, 144);
+    overflow: hidden;	
+    text-decoration: none;
+    cursor: pointer;    
+    margin: 0px 4px;
+    padding: 8px 0px 8px 12px;
+}
+div.flow-selector > div.dropdown-menu > a#addCusotmFlow
+{
+    border-bottom: none;
+    color: #82c786;
+}
+
+div.flow-selector > div.dropdown-menu
+{
+   	padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 5px;
+
+}
+div.flow-selector > div.dropdown-menu > a.dropdown-item:hover
+{
+    background-color: rgb(249, 249, 250)
+}
+div.flow-selector > div.popover
+{
+	left:0px !important;
+}
+div.flow-selector > div.popover >div.popover-content
+{
+	width:313px;
+}
+ .flow-selector {
+  width: 303px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #d6d6d6;
+  margin: auto;
+  margin-top:15px;
+}
+.down_arrow
+{
+   
+    font-size: 0px;
+    line-height: 0%;
+    width: 0px;
+    border-top: 10px solid #707090;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    float: right;
+    margin: 6px;
+   
+}
+.up_arrow
+{
+    font-size: 0px; line-height: 0%; width: 0px;
+    
+    border-bottom: 10px solid #707090;
+	border-left: 5px solid white;	
+	border-right: 5px solid white;
+    float: right;
+    margin: 6px;
+}
+
+.list_container
+{
+	width:76.74%;
+    border-top: solid 1px rgba(74, 74, 74, 0.3);
+    margin:0 auto;
+    margin-top:15px;
+    padding-left:3.33%;
+    padding-right:3.33%;
+    padding-top:21px;
+}  
+
+.ind_page
+{
+   padding:10px !important; 	
+   cursor: pointer;
+}
+.ind_page_con
+{
+	max-width: 265px;
+    background-color: #f7f8f8;
+    height: 265px;
+    padding: 0px !important;
+    margin: 0px 1% 20px 0px;
+    margin:0 auto;
+    margin-bottom:20px;
+}
+
+.ind_page_con p:nth-child(2) 
+{
+    margin: 0 auto;
+    float: left;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4a4a4a;
+    padding: 20px 15px 5px 15px;
+    padding-bottom: 5px;
+    width: 100%;
+	
+}
+.ind_page_con p:nth-child(3) 
+{
+    margin: 0 auto;
+    float: left;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4a4a4a;
+    padding: 15px;
+    padding-top: 0px;
+    width: 100%;
+	
+}
+.page_template .row
+{
+  width:100%;
+  margin:0px;
+}
+
+.right_cor
+{
+	font-size: 0px; line-height: 0%; width: 0px;
+	border-bottom: 70px solid #d2d6da;
+	border-right: 70px solid white;
+	float:right;
+}

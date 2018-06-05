@@ -582,8 +582,36 @@ add_filter( 'widget_tag_cloud_args', 'twentyseventeen_widget_tag_cloud_args' );
 
 remove_filter( 'the_content', 'wpautop' );
 
+
+add_action('get_header', 'remove_admin_login_header');
+
+function remove_admin_login_header() {
+	remove_action('wp_head', '_admin_bar_bump_cb');
+}
  
 
+function get_page_lst(WP_REST_Request $request) {
+	$parameter = $request->get_param('industry');
+	$posts = get_posts(
+			array(
+					'numberposts'	=> -1,
+					'post_type'		=> 'page',
+					'name' => $parameter,
+					'post_status'   => 'draft,publish'
+     			)
+	);
+	if (empty($posts))
+	{
+		return null;
+	}
+	return $posts;
+}
+add_action( 'rest_api_init', function () {
+	register_rest_route( 'custom_url', '/pglst', array(
+			'methods' => 'GET',
+			'callback' => 'get_page_lst',
+	));
+});
 
 /** end of Kaushal Devani **/
 /**
