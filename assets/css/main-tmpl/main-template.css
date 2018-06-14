@@ -249,7 +249,7 @@ display:table;
   
   .post_card_to
   {
-     margin-top:127px !important;
+     margin-top:100px !important;
   }
   
 }
@@ -752,6 +752,8 @@ display:table;
 	
     width: 100%;
     height: 478px;
+    max-width: 1875px;
+    margin: 0 auto;
 }
 .post_card_lower >  .post_card_front >  img
 {
@@ -766,6 +768,8 @@ display:table;
     height: 478px;
     background-color: #ffffff;
     border: solid 2px #d6d6d6;
+    max-width: 1875px;
+    margin: 0 auto;
 }
 .post_card_lower >  .post_card_back >  img
 {

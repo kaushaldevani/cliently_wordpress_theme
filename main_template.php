@@ -137,7 +137,7 @@ $current_theme = "x";
 
 							$(window).scroll(function(){
 							 
-							    if($(document).scrollTop().valueOf() > 275)
+							    if($(document).scrollTop().valueOf() >= 275)
 							    {
 									$('.action-left-panel').addClass('fixed');	
 									$('.right-panel').addClass('fixed_right');
