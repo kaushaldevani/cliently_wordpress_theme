@@ -24,7 +24,7 @@ var addactions = function(actions)
       action = actions[i];
       var action_name = action.class_name;
 	  var addDiv, stepname ,imgpath ,action_detail;
-	  var base_url = '~/../wp-content/themes/' + current_theme + '/assets/images/cliently-images';
+	  var base_url = window.location.protocol + "//" + window.location.host + '/wp-content/themes/' + current_theme + '/assets/images/cliently-images';
 
 	  addDiv = $('div#action_template > div.action-in-flow').clone(true, true);
 	  action_position = action.position;
@@ -313,7 +313,7 @@ var addTips = function(tips)
 	 {
 	      console.log(tips);
 	      var addDiv, stepname ,imgpath ,action_detail;
-		  var base_url = '~/../wp-content/themes/' + current_theme + '/assets/images/cliently-images';
+		  var base_url = window.location.protocol + "//" + window.location.host + '/wp-content/themes/' + current_theme + '/assets/images/cliently-images';
 
 		  addDiv = $('div#action_template > div.action-in-flow').clone(true, true);
 		  stepname = "TOP SECRET";
@@ -355,7 +355,7 @@ $(document).ready(function(){
 		$('.action-in-flow').removeClass('active');
 		$(this).addClass('active');
 		
-		var base_url = '~/../wp-content/themes/' + current_theme + '/assets/images/cliently-images';
+		var base_url = window.location.protocol + "//" + window.location.host + '/wp-content/themes/' + current_theme + '/assets/images/cliently-images';
 
 		var modal = $('.modal');
 		$(modal).css('display','none');
@@ -381,7 +381,7 @@ $(document).ready(function(){
             $(modal).find('.modal-header > h4 ').append(action_header);
 
 
-            var tips_body = $('<div class="tips_body" ><p>Who yous should target:</p><div/></div>');
+            var tips_body = $('<div class="tips_body" ><p>Who you should target:</p><div/></div>');
             $(tips_body).find('div').append($(hidden).find('.tips_body').val());
             $(modal).find('.work-creation-wizard-step').append(tips_body);
             $(modal).css('display','block');

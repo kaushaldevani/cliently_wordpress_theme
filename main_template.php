@@ -31,6 +31,8 @@ $current_theme = "x";
                   $author = json_encode($someArray['author'],true);
                   $tips = json_encode($someArray['tips'],true);
                   $ind_data = json_encode($someArray['industry_data'],true);
+                  $protocol = (!empty($_SERVER['HTTPS'])) ? "https://" : "http://";
+                  $base_uri = $protocol . $_SERVER['HTTP_HOST'] .'/wp-content/themes/'.$current_theme.'/assets/images/cliently-images';
                   ?>
                   <div class="page_title">
                       <div class="page_name">
@@ -60,7 +62,7 @@ $current_theme = "x";
 									<div class="modal-content">
 										<div class="modal-header">
 											<h4 class="modal-title">
-												<img src="~/../wp-content/themes/twentyseventeen/assets/images/cliently-images/email.svg"> Send Email
+												<img src="<?php echo $base_uri;?>/email.svg"> Send Email
 											</h4> 
 								        </div>
 								        <div class="modal-body">
@@ -90,7 +92,7 @@ $current_theme = "x";
 						  		<div class="send-emails-videos">
 						  		<div class="list-item">
 							  		<div class="icon-wrap">
-							  			<img src="~/../wp-content/themes/<?php echo $current_theme;?>/assets/images/cliently-images/circle_check.svg">
+							  			<img src="<?php echo $base_uri;?>/circle_check.svg">
 							  		</div>
 							  		<div class="sev-text">
 							  			Reach out to clients through multiple channels to ensure the highest response rate.
@@ -98,7 +100,7 @@ $current_theme = "x";
 							  		</div>
 							  	<div class="list-item">
 							  		<div class="icon-wrap">
-							  			<img src="~/../wp-content/themes/<?php echo $current_theme;?>/assets/images/cliently-images/circle_check.svg">
+							  			<img src="<?php echo $base_uri;?>/circle_check.svg">
 							  		</div>
 							  		<div class="sev-text">
 							  			Send automated Emails, custom Video Messages, Physical Postcards, and Handwritten Notes with Gift Cards to really engage your prospect.
@@ -106,7 +108,7 @@ $current_theme = "x";
 							  		</div>
 							  		<div class="list-item">
 							  		<div class="icon-wrap">
-										<img src="~/../wp-content/themes/<?php echo $current_theme;?>/assets/images/cliently-images/circle_check.svg">
+										<img src="<?php echo $base_uri;?>/circle_check.svg">
 							  		</div>
 							  		<div class="sev-text">
 							  			Engage with leads directly from your CRM or by uploading a list of contacts.
