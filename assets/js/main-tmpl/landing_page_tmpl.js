@@ -17,11 +17,11 @@
 		}
 
 
-var filterPagelst = function(industry)
+var filterPagelst = function(cat_ID)
 {
 	var RequestHeaders = [];
     RequestHeaders['Content-Type'] = 'application/x-www-form-urlencoded';
-    var url = '/wp-json/custom_url/pglst?industry='+industry;
+    var url = '/wordpress/index.php/wp-json/custom_url/pglst?cat_ID='+cat_ID;
     var xhr = creatXhrRequest("GET", url, false, RequestHeaders, false);
     xhr.send();
     

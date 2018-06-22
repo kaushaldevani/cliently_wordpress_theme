@@ -591,12 +591,12 @@ function remove_admin_login_header() {
  
 
 function get_page_lst(WP_REST_Request $request) {
-	$parameter = $request->get_param('industry');
+	$parameter = $request->get_param('cat_ID');
 	$posts = get_posts(
 			array(
 					'numberposts'	=> -1,
 					'post_type'		=> 'page',
-					'name' => $parameter,
+					'cat' => $parameter,
 					'post_status'   => 'draft,publish'
      			)
 	);
@@ -612,6 +612,12 @@ add_action( 'rest_api_init', function () {
 			'callback' => 'get_page_lst',
 	));
 });
+
+function add_category_for_page() 
+{
+	register_taxonomy_for_object_type('category', 'page');
+}
+add_action( 'init', 'add_category_for_page' );
 
 /** end of Kaushal Devani **/
 /**

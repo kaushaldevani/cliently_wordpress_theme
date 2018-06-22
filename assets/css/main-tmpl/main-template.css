@@ -163,6 +163,7 @@ display:table;
   margin:11% 5.6% 11% 4.5%;
   float:right;
   cursor:pointer;
+  pointer-events: none;
  	
 }
 .author-in-flow > .action-flow-image 
@@ -342,6 +343,20 @@ display:table;
     background-color: #4a90e2 !important;
     height: 40px;
     border: none !important;
+    padding:10px !important;
+}
+
+.short-demo-text
+{
+	padding: 5px;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #525252;
 }
 /*related to modal Window*/
 .modal

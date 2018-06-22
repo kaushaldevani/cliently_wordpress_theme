@@ -117,7 +117,12 @@ $current_theme = "x";
 						  		</div>
 					  		
 						  		<div class="row text-center">
-						  			<button class="btn btn-primary btn-creat-flow">Create your own Flow!</button></div>
+						  			<a class="btn btn-primary btn-creat-flow" href="https://calendly.com/clientlysales/15-minutes-with-cliently/?utm_source=flowcontentpage" target="_blank">Create your own Flow!</a>
+						  			<div class="short-demo-text">
+							  			Book a short demo.
+							  		</div>
+						  			
+						  			</div>
 						  		
 						  		
 					  			<div class="border-bottom"></div>

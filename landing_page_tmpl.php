@@ -9,32 +9,24 @@ wp_enqueue_script( 'bootstrap-js', get_stylesheet_directory_uri().'/assets/js/ma
 wp_enqueue_script( 'landing_page_tmpl', get_stylesheet_directory_uri().'/assets/js/main-tmpl/landing_page_tmpl.js' );
 
 get_header();
-$url = 'https://www.cliently.com/cliently_cms/api/industry.php';
-$arg = array ( 'method' => 'GET');
 $ind_lst = array();
-$response = wp_remote_get ( $url, $arg );
-$respo_body = json_decode($response['body']);
 
-if($respo_body->status ==  200)
+$args = array(
+				"hide_empty" => 0,
+				"type"       => "post",
+				"orderby"    => "name",
+				"order"      => "ASC" 
+			 );
+$categories = get_categories($args);
+foreach ($categories as $cat)
 {
-	foreach ($respo_body->data as $row)
+	if($cat->cat_ID != 1)
 	{
 		$ind = array();
-		$ind['industry'] =$row->Industry;
-
-		$input = preg_replace('~[^\pL\d]+~u', '-',  $row->Industry);
-		$input = iconv('utf-8', 'us-ascii//TRANSLIT', $input);
-		$input = preg_replace('~[^-\w]+~', '', $input);
-		$input = trim($input, '-');
-		$input = preg_replace('~-+~', '-', $input);
-		$input = strtolower($input);
-		$ind['val'] =strtolower($input);
+		$ind['cat_name'] =$cat->cat_name;
+		$ind['cat_ID'] =$cat->cat_ID;
 		array_push($ind_lst,$ind);
 	}
-}
-else
-{
-	alert('Error While Fetching Industry List');
 }
 
 ?>
@@ -56,7 +48,7 @@ else
 		    <?php 
 			    foreach ($ind_lst as $industry)
 			    {?>
-			    	<a class="dropdown-item" val="<?php echo $industry["val"];?>" href="#"><?php echo $industry["industry"];?> </a>
+			    	<a class="dropdown-item" cat_id="<?php echo $industry["cat_ID"];?>" href="#"><?php echo $industry["cat_name"];?> </a>
 		   <?php }?> 
   		  </div>
         </div>
@@ -81,7 +73,7 @@ $(document).ready(function() {
 			$('#dropdown_for_workflow-selection').text($(this).text());
 			$('#dropdown_for_workflow-selection').append('<div class=\'down_arrow\'>');
 			$('div.list_container > div.page_template > div.row').empty();
-	        filterPagelst($(this).attr('val'));
+	        filterPagelst($(this).attr('cat_id'));
 		});
 		
 	    $('div.flow-selector > .dropdown-menu > .dropdown-item:first-child').click();	
