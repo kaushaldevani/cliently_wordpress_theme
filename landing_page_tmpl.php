@@ -11,20 +11,18 @@ wp_enqueue_script( 'landing_page_tmpl', get_stylesheet_directory_uri().'/assets/
 get_header();
 $ind_lst = array();
 
-$args = array(
-				"hide_empty" => 0,
-				"type"       => "post",
-				"orderby"    => "name",
-				"order"      => "ASC" 
-			 );
-$categories = get_categories($args);
-foreach ($categories as $cat)
+$url = 'https://www.cliently.com/cliently_cms/api/industry.php';
+$arg = array ( 'method' => 'GET');
+$response = wp_remote_get ( $url, $arg );
+$respo_body = json_decode($response['body']);
+
+if($respo_body->status ==  200)
 {
-	if($cat->cat_ID != 1)
+	foreach ($respo_body->data as $row)
 	{
 		$ind = array();
-		$ind['cat_name'] =$cat->cat_name;
-		$ind['cat_ID'] =$cat->cat_ID;
+		$ind['cat_name'] =$row->Industry;
+		$ind['cat_ID'] =$row->wordpress_id;
 		array_push($ind_lst,$ind);
 	}
 }
