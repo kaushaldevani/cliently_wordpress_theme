@@ -613,6 +613,45 @@ add_action( 'rest_api_init', function () {
 	));
 });
 
+
+function is_pages_exist(WP_REST_Request $request) {
+
+	$pg_lst_raw = $request->get_body();
+	$pg_lst = json_decode($pg_lst_raw, true);
+	$pg_lst = $pg_lst['pg_lst'];
+	$pg_lst_result = array();
+	foreach ($pg_lst as $pg)
+	{
+		$post_data = array();
+		$post_data['id'] = $pg['id'];
+		$post_data['wp_id'] = $pg['wp_id'];
+		if(get_post_status($pg['wp_id']) === FALSE ||  get_post_status($pg['wp_id']) === 'trash')
+		{
+			$post_data['is_exist'] = false;
+		}
+		else
+		{
+			$post_data['is_exist'] = true;
+		}
+		array_push($pg_lst_result ,$post_data);
+	}
+	
+	if (empty($pg_lst_result))
+	{
+		return null;
+	}
+	return $pg_lst_result;
+	
+}
+
+add_action( 'rest_api_init', function () {
+		register_rest_route( 'custom_url', '/checkForPagesExist', array(
+				'methods' => 'POST',
+				'callback' => 'is_pages_exist',
+		));
+	});
+
+
 function add_category_for_page() 
 {
 	register_taxonomy_for_object_type('category', 'page');
