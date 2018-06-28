@@ -283,7 +283,7 @@ var addAuthorDetails = function(author)
 
   	      addDiv.append('<div class="wrtn_by"> Written by : </div>');
 	  	  stepname = author.written_by;
-	  	  imgpath  = aws_upload_url + author.author_image;
+	  	  imgpath  = aws_upload_url + encodeURIComponent(author.author_image);
 	  	  action_detail= author.job_title ;
 	  	  $(addDiv).find('div.action-flow-image >img').remove();
 	  	  $(addDiv).find('div.action-flow-image').css('background-image','url('+imgpath+')');
