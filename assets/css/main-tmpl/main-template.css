@@ -252,7 +252,22 @@ display:table;
   {
      margin-top:100px !important;
   }
-  
+  .hdn_envelop_to
+  {
+     margin-top:140px !important;
+  }
+  .gift_envelop_to
+  {
+     margin-top:140px !important;
+  }
+  .gift_card_image
+  {
+     margin-top: 62px !important;
+  }
+  .gift_card_amount
+  {
+     margin-top: 62px !important;
+  }
 }
 
 
@@ -1091,7 +1106,7 @@ display:table;
     letter-spacing: normal;
     text-align: left;
     color: #707090;
-     margin: 2% 6%;
+     margin: 17px 6% 17px;
 }
 .hdn_envelop
 {
@@ -1102,7 +1117,7 @@ display:table;
     box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
     background-color: #ffa7a7;
     border: solid 1px #ccccd7;
-    margin: 2.3% auto 0;
+    margin: 2.3% auto 50px;
 }
 
 .hdn_envelop_from
@@ -1180,7 +1195,8 @@ display:table;
 .gift_card_area
 {
 	margin-left: 7.2%;
-    margin-top: 4.1%;
+    margin-top: 34px;
+    height:435px;
 }
 .gift_card_area > p
 {
@@ -1304,7 +1320,7 @@ display:table;
     box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
     background-color: #ffffff;
     border: solid 1px #ccccd7;
-   	margin: 2.3% auto 0;
+   	margin: 19px auto 0;
     background: whitesmoke;
     display:none;
     background-size:100% 100%;
@@ -1349,7 +1365,7 @@ display:table;
     letter-spacing: normal;
     text-align: left;
     color: #707090;
-     margin: 2% 6%;
+     margin: 17px 6% 17px;
      display:none;
 }
 
@@ -1363,7 +1379,7 @@ display:table;
     box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
     background-color: #ffa7a7;
     border: solid 1px #ccccd7;
-    margin: 2.3% auto 0;
+    margin: 19px auto 50px;
 }
 
 .gift_envelop_from
