@@ -38,7 +38,7 @@ var addactions = function(actions)
 				  action_detail= action.email_subject ;
 				  var msg_body =  $('<textarea class=\'email_body\' />');
 				  var email_sub = $('<input class=\'email_sub\' />');
-				  msg_body.val(action.email_body);
+				  msg_body.val(decodeURIComponent(action.email_body));
 				  email_sub.val(action_detail);
 				  $(addDiv).find('.hidden_data_for_action').append(msg_body, email_sub);
 		          break;
@@ -71,7 +71,7 @@ var addactions = function(actions)
 				  var video_msg_body =  $('<textarea class="videoemail_body" />');
 				  var video_email_sub = $('<input class="video_email_sub" />');
 				  var video_email_name = $('<input class="video_email_name" />');
-				  video_msg_body.val(action.video_email_body);
+				  video_msg_body.val(decodeURIComponent(action.video_email_body));
 				  video_email_sub.val(action_detail);
 				  video_email_name.val(action.video_name);
 				  $(addDiv).find('.hidden_data_for_action').append(video_email_sub,video_email_name,video_msg_body);
@@ -325,7 +325,7 @@ var addTips = function(tips)
 		  $(addDiv).addClass('tips-in-flow');
 
 		  var tips_body =  $('<textarea class="tips_body" />');
-		  tips_body.val(tips);
+		  tips_body.val(decodeURIComponent(tips));
 		  $(addDiv).find('.hidden_data_for_action').append(tips_body);
 
 		  $(".action-left-panel").append(addDiv);
