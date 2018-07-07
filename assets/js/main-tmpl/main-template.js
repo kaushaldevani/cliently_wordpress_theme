@@ -556,7 +556,7 @@ $(document).ready(function(){
 
 //	  			      $(modal).find('.modal-header > h4 ').append( 'STEP ' + position + ' ' + action );
 				      var hdn_comm = $('<div class="hdn_comm">');
-				      hdn_comm.append('<div class="btn-group" id="hdn_toggle" data-toggle="buttons" ><label class="btn btn-default btn-on hdn_toggle_on"><input type="radio" value="1"  name="hdn_toggle" >MESSAGE</label><label class="btn btn-default btn-off hdn_toggle_off"><input type="radio" value="0" name="hdn_toggle">ENVELOP</label></div>')
+				      hdn_comm.append('<div class="btn-group" id="hdn_toggle" data-toggle="buttons" ><label class="btn btn-default btn-on hdn_toggle_on"><input type="radio" value="1"  name="hdn_toggle" >MESSAGE</label><label class="btn btn-default btn-off hdn_toggle_off"><input type="radio" value="0" name="hdn_toggle">ENVELOPE</label></div>')
 				      hdn_comm.find('.btn-on').addClass('active');
 				      var hdn_message = $('<div class="hdn_message"><textarea/></div>');
 				      hdn_message.find('textarea').val($(hidden).find('textarea.hwnote_msg').val());
@@ -610,8 +610,7 @@ $(document).ready(function(){
 
 	  			      var gift_card_image = $('<div class="gift_card_image"><img src=""/></div>');
 	  			      $(gift_card_image).find('img').attr('src' ,aws_upload_url + $(hidden).find('input.gifting_image').val());
-	  			      gift_card_image.append('<p>Amazon.com Gift Card</p>');
-	  			      gift_card_image.append('<a href="#">Choose a Different Gift Card</a>');
+	  			      gift_card_image.append('<p>Example Gift Card</p>');
 	  			      gift_card_area.append(gift_card_image);
 
 	  			      var gift_card_amount =$('<div class="gift_card_amount"><p>Load the Gift Card with:</p></div>');
