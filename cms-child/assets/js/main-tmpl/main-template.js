@@ -1,6 +1,7 @@
 var base_url_back = 'https://www.cliently.com/cliently_cms/uploads';
 var aws_upload_url = 'https://cliently-wp.s3.us-west-2.amazonaws.com/cliently_cms/';
 var current_theme = "x";
+var current_child_theme = "cms-child";
 var default_credit = 8;
 
 
@@ -24,7 +25,7 @@ var addactions = function(actions)
       action = actions[i];
       var action_name = action.class_name;
 	  var addDiv, stepname ,imgpath ,action_detail;
-	  var base_url = window.location.protocol + "//" + window.location.host + '/wp-content/themes/' + current_theme + '/assets/images/cliently-images';
+	  var base_url = window.location.protocol + "//" + window.location.host + '/wp-content/themes/' + current_child_theme + '/assets/images/cliently-images';
 
 	  addDiv = $('div#action_template > div.action-in-flow').clone(true, true);
 	  action_position = action.position;
@@ -313,7 +314,7 @@ var addTips = function(tips)
 	 {
 	      console.log(tips);
 	      var addDiv, stepname ,imgpath ,action_detail;
-		  var base_url = window.location.protocol + "//" + window.location.host + '/wp-content/themes/' + current_theme + '/assets/images/cliently-images';
+		  var base_url = window.location.protocol + "//" + window.location.host + '/wp-content/themes/' + current_child_theme + '/assets/images/cliently-images';
 
 		  addDiv = $('div#action_template > div.action-in-flow').clone(true, true);
 		  stepname = "TOP SECRET";
@@ -355,7 +356,7 @@ $(document).ready(function(){
 		$('.action-in-flow').removeClass('active');
 		$(this).addClass('active');
 		
-		var base_url = window.location.protocol + "//" + window.location.host + '/wp-content/themes/' + current_theme + '/assets/images/cliently-images';
+		var base_url = window.location.protocol + "//" + window.location.host + '/wp-content/themes/' + current_child_theme + '/assets/images/cliently-images';
 
 		var modal = $('.modal');
 		$(modal).css('display','none');
