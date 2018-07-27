@@ -9,6 +9,7 @@ wp_enqueue_script( 'main-template', get_stylesheet_directory_uri().'/assets/js/m
 
 
 $current_theme = "x";
+$current_child_theme = "cms-child";
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +33,7 @@ $current_theme = "x";
                   $tips = json_encode($someArray['tips'],true);
                   $ind_data = json_encode($someArray['industry_data'],true);
                   $protocol = (!empty($_SERVER['HTTPS'])) ? "https://" : "http://";
-                  $base_uri = $protocol . $_SERVER['HTTP_HOST'] .'/wp-content/themes/'.$current_theme.'/assets/images/cliently-images';
+                  $base_uri = $protocol . $_SERVER['HTTP_HOST'] .'/wp-content/themes/'.$current_child_theme.'/assets/images/cliently-images';
                   ?>
                   <div class="page_title">
                       <div class="page_name">
